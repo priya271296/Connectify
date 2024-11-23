@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connectify - Sign Up</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="signUp textAlignCenter">
+  <h2>Create an Account</h2>
+  <form id="signupForm">
+    <!-- Basic User Details -->
+    <input type="text" id="name" placeholder="Full Name" required>
+    <input type="email" id="email" placeholder="Email" required>
+    <input type="password" id="password" placeholder="Password" required>
+    <input type="text" id="skills" placeholder="Skills (comma-separated)" required>
+
+    <!-- Graduation Details -->
+    <h3>Graduation Details</h3>
+    <!-- Educational Level Dropdown -->
+    <label for="educationLevel">Select Education Level:</label>
+    <select id="educationLevel" class="formInput" required>
+      <option value="" disabled selected>Select your education level</option>
+      <option value="High School">High School</option>
+      <option value="Bachelor's Degree">Bachelor's Degree</option>
+      <option value="Master's Degree">Master's Degree</option>
+      <option value="PhD">PhD</option>
+      <option value="Other">Other</option>
+    </select>
+    <br></br>
+    <label>Start Date:</label>
+    <input type="date" id="graduationStartDate" required>
+    <label>End Date:</label>
+    <input type="date" id="graduationEndDate" required>
+
+    <!-- Work Experience -->
+    <h3>Work Experience</h3>
+    <div id="experienceContainer">
+      <div class="experience">
+        <input type="text" placeholder="Company Name" class="companyName" required>
+        <input type="text" placeholder="Role" class="role" required>
+        <label>Start Date:</label>
+        <input type="date" class="expStartDate" required>
+        <label>End Date:</label>
+        <input type="date" class="expEndDate" required>
+      </div>
+    </div>
+    <button type="button" id="addExperience">Add More Experience</button>
+
+    <!-- Submit Button -->
+    <button type="submit">Sign Up</button>
+    <p>Already have an account? <a href="login.html">Login</a></p>
+  </form>
+  <p id="message" class="message"></p>
+</div>
+
+<!-- JavaScript File -->
+<script src="app.js"></script>
+</body>
+</html>
